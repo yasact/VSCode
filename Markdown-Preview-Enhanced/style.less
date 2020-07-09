@@ -1,0 +1,143 @@
+/* Please visit the URL below for more information: */
+/*   https://shd101wyy.github.io/markdown-preview-enhanced/#/customize-css */
+/* 
+Markdown Preview EnhancedのCSSファイル
+プレビューをかっこよくして、
+pdf変換すると社内報告書みたいな見た目になる。
+Date:200709
+Auther:yasact
+*/
+
+.markdown-preview.markdown-preview {
+  // modify your style here
+  // eg: background-color: blue;
+
+  /* 色を定義  */
+  @_txtColor: #e4d3d3; //テキストの文字色
+  @_tableBGColor: #7a7a7a; //表の背景色
+  @_tableHeaderColor:@_tableBGColor - #222222; //表のヘッダーの背景色
+  @_BorderBottomColor: #f5f5f5;
+
+  margin: 0;
+  //font-family: "Yu-Gothic-UI";
+  font-family: -apple-system, BlinkMacSystemFont, Roboto, "Segoe UI",
+    "Helvetica Neue", HelveticaNeue, YuGothic, "Yu Gothic Medium", "Yu Gothic",
+    Verdana, Meiryo, sans-serif;
+
+  color: @_txtColor;
+  background-color: #1e1e1f;
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5 {
+    color: @_txtColor;
+    font-weight: normal;
+  }
+  strong {
+    color: @_txtColor;
+  }
+  h1 {
+    padding-bottom: 0.3em;
+    line-height: 1.2;
+    border-bottom-width: 1px;
+    border-bottom-style: solid;
+    //border-bottom-color: @_BorderBottomColor;
+    border-bottom-color: whitesmoke;
+  }
+
+  h2 {
+    padding-bottom: 0.3em;
+    line-height: 1.2;
+    border-bottom-width: 1px;
+    border-bottom-style: solid;
+    //border-bottom-color: @_BorderBottomColor;
+    border-bottom-color: whitesmoke;
+  }
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    border-spacing: 0;
+  }
+
+  table th,
+  table td {
+    padding: 10px 5px;
+    text-align: center;
+  }
+
+  table tr:nth-child(odd) {
+    background-color: @_tableBGColor;
+    color: @_txtColor + #222222;
+  }
+  table th {
+    color: @_txtColor;
+    font-weight: bold;
+    background-color: @_tableHeaderColor;
+  }
+
+  /* pdf出力用のCSS設定 */
+
+  @media print {
+    -webkit-print-color-adjust: exact; //pdf変換はchromeを経由しててchromeはこの記述がないとBackgroundの色を変えてくれない
+    max-width: 900px;
+
+    /*色定義*/
+    @_txtColor_pdf: #0a0a0a; //テキストの文字色(pdf出力時)
+    @_tableBGColor_pdf: #fafafa; //表の奇数行の背景色(pdf出力時)
+    @_tableHeaderColor_pdf: #f0f0f0; //表ヘッダーの背景色(pdf出力時)
+    @_tableBorderColor_pdf: #505050; //表の枠色(pdf出力時)
+
+    //font-family: "Yu-Gothic-UI";
+    font-family: -apple-system, BlinkMacSystemFont, Roboto, "Segoe UI",
+      "Helvetica Neue", HelveticaNeue, YuGothic, "Yu Gothic Medium", "Yu Gothic",
+      Verdana, Meiryo, sans-serif;
+
+    color: @_txtColor_pdf;
+    background-color: #ffffff;
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5 {
+      color: @_txtColor_pdf;
+      font-weight: normal;
+    }
+
+    h1 {
+      padding-bottom: 0.3em;
+    }
+
+    h2 {
+      background: #d9d9d9;
+      padding: 0.5em;
+    }
+
+    table {
+      width: 100%;
+    }
+    table th,
+    table td {
+      padding: 10px 5px;
+      text-align: center;
+      color: @_txtColor_pdf;
+      border-style: solid;
+      border-width: 0.1px;
+      border-color: @_tableBorderColor_pdf;
+    }
+
+    /* 表の奇数行目のプロパティ */
+    table tr:nth-child(odd) {
+      background-color: @_tableBGColor_pdf;
+      color: @_txtColor_pdf + #dadada;
+    }
+
+    table th {
+      color: @_txtColor_pdf;
+      font-weight: bold;
+      background-color: @_tableHeaderColor_pdf;
+    }
+  }
+}

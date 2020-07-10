@@ -11,14 +11,12 @@
   "files.autoSave": "off",
   "git.ignoreMissingGitWarning": true,
   "terminal.integrated.shell.windows": "C:\\Program Files\\PowerShell\\6\\pwsh.exe",
- 
   "markdown.extension.math.enabled": false,
   "markdown-preview-enhanced.enableScriptExecution": true,
   "[markdown]": {
     "editor.defaultFormatter": "yzhang.markdown-all-in-one"
   },
   "editor.renderControlCharacters": true,
-
   "markdownlint.config": {
     "MD013": false,
     "MD033": false
@@ -30,5 +28,27 @@
   "workbench.colorTheme": "Dark+ Material",
   "workbench.iconTheme": "eq-material-theme-icons-darker",
   "autolispext.debug.LaunchProgram": "C:\\Program Files\\Autodesk\\AutoCAD 2021\\acad.exe",
-  "autolispext.debug.AttachProcess": "acad.exe"
+  "autolispext.debug.AttachProcess": "acad.exe",
+
+  // vimの設定-----------------------------------------------------------------------
+  "vim.useSystemClipboard": true, // システムのクリップボードを利用する
+  "vim.hlsearch": true, // 検索にマッチしたテキストをハイライトする
+  "vim.visualstar": true, // ビジュアルモードで * や # で検索
+  "vim.ignorecase": true, // 検索時に大文字小文字を無視する
+  "vim.incsearch": true, // インクリメンタルサーチ
+  "vim.highlightedyank.enable": true, //yankした箇所をハイライト表示にする
+  "vim.highlightedyank.color": "rgba(0, 240, 170, 0.5)", //yankした時の色
+  "vim.highlightedyank.duration": 150, //yankした時の色の表示時間
+  "vim.autoindent": true, //autoindent
+
+  //nnoremap
+  "vim.normalModeKeyBindingsNonRecursive": [],
+
+  //vimではなくvscode側のキーを有効にする
+  "vim.handleKeys": {
+    "<C-a>": false, //全選択
+    "<C-f>": false, //検索
+    "<C-h>": false //置換
+  }
+  // ↑↑vimの設定--------------------------------------------------------------------
 }

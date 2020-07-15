@@ -12,7 +12,7 @@
   "git.ignoreMissingGitWarning": true,
   "terminal.integrated.shell.windows": "C:\\Program Files\\PowerShell\\6\\pwsh.exe",
   "markdown.extension.math.enabled": false,
-  "markdown-preview-enhanced.enableScriptExecution": true,
+  "markdown-preview-enhanced.enableScriptExecution": true, // markdown-preview-enhancedでコードブロック内のコードを実行(code chunk)できるようにする。
   "[markdown]": {
     "editor.defaultFormatter": "yzhang.markdown-all-in-one"
   },
@@ -49,6 +49,8 @@
     "<C-a>": false, //全選択
     "<C-f>": false, //検索
     "<C-h>": false //置換
-  }
+  },
+  "markdown-preview-enhanced.pandocPath": "C:\\Program Files\\Pandoc\\pandoc.exe",
+  "markdown-preview-enhanced.mermaidTheme": "dark"
   // ↑↑vimの設定--------------------------------------------------------------------
 }

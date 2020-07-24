@@ -31,9 +31,11 @@ Auther:yasact
   h2,
   h3,
   h4,
-  h5 {
+  h5,
+  h6 {
     color: @_txtColor;
-    font-weight: normal;
+    // font-weight: normal;
+    font-weight: bold;
   }
   strong {
     color: @_txtColor;
@@ -84,7 +86,7 @@ Auther:yasact
     max-width: 900px;
 
     /*色定義*/
-    @_txtColor_pdf: #0a0a0a; //テキストの文字色(pdf出力時)
+    @_txtColor_pdf: #181818; //テキストの文字色(pdf出力時)
     @_tableBGColor_pdf: #fafafa; //表の奇数行の背景色(pdf出力時)
     @_tableHeaderColor_pdf: #f0f0f0; //表ヘッダーの背景色(pdf出力時)
     @_tableBorderColor_pdf: #505050; //表の枠色(pdf出力時)
@@ -93,6 +95,7 @@ Auther:yasact
     font-family: -apple-system, BlinkMacSystemFont, Roboto, "Segoe UI",
       "Helvetica Neue", HelveticaNeue, YuGothic, "Yu Gothic Medium", "Yu Gothic",
       Verdana, Meiryo, sans-serif;
+    font-size: 11pt;
 
     color: @_txtColor_pdf;
     background-color: #ffffff;
@@ -101,20 +104,48 @@ Auther:yasact
     h2,
     h3,
     h4,
-    h5 {
+    h5,
+    h6 {
       color: @_txtColor_pdf;
-      font-weight: normal;
+      font-weight: bold;
     }
 
     h1 {
+      font-size: 18pt;
       padding-bottom: 0.3em;
+      border-bottom-style: none;
     }
 
     h2 {
+      font-size: 16pt;
       background: #d9d9d9;
-      padding: 0.5em;
+      padding: 0.5em 0.5em 0.5em 0;
     }
 
+    h3 {
+      font-size: 14pt;
+      padding-bottom: 0.3em;
+      line-height: 1.2;
+      border-bottom-width: 1px;
+      border-bottom-style: solid;
+      border-bottom-color: rgb(32, 32, 32);
+    }
+    h4 {
+      font-size: 12pt;
+      font-weight: bold;
+    }
+
+    h5 {
+      font-size: 12pt;
+      font-weight: bold;
+    }
+    h6 {
+      font-size: 11pt;
+      font-weight: bold;
+    }
+    strong {
+      color: @_txtColor_pdf;
+    }
     table {
       width: 100%;
     }
